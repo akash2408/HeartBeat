@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/mainScreen"
+        android:icon="@drawable/navigation_allsongs"
+        android:title="All Songs" />
+    <item
+        android:id="@+id/favourite"
+        android:icon="@drawable/navigation_favorites"
+        android:title="Favourite" />
+</menu>

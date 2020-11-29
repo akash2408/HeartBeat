@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/mainScreen">
+
+    <fragment
+        android:id="@+id/mainScreen"
+        android:name="com.example.heartbeatpart2.MainScreen.MainScreen"
+        android:label="All Songs"
+        tools:layout="@layout/fragment_main_screen">
+        <action
+            android:id="@+id/action_mainScreen_to_playMusic"
+            app:destination="@id/playMusic" />
+        <action
+            android:id="@+id/action_mainScreen_to_playMusic2"
+            app:destination="@id/playMusic" />
+        <action
+            android:id="@+id/action_mainScreen_to_playMusic3"
+            app:destination="@id/playMusic" />
+        <action
+            android:id="@+id/action_mainScreen_to_playMusic4"
+            app:destination="@id/playMusic" />
+    </fragment>
+    <fragment
+        android:id="@+id/playMusic"
+        android:name="com.example.heartbeatpart2.PlayMusic.PlayMusic"
+        android:label="PlayMusic"
+        tools:layout="@layout/fragment_play_music">
+        <argument
+            android:name="songPostion"
+            app:argType="integer" />
+        <argument
+            android:name="songList"
+            app:argType="com.example.heartbeatpart2.Favourite.Songs[]" />
+        <argument
+            android:name="data"
+            app:argType="com.example.heartbeatpart2.Favourite.Songs" />
+        <argument
+            android:name="navigateFrom"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/favourite"
+        android:name="com.example.heartbeatpart2.Favourite.Favourite"
+        android:label="Favourite"
+        tools:layout="@layout/fragment_favourite">
+        <action
+            android:id="@+id/action_favourite_to_playMusic"
+            app:destination="@id/playMusic" />
+    </fragment>
+</navigation>
